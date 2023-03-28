@@ -17,6 +17,10 @@ const EuiccInfo = NativeModules.EuiccInfo
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return EuiccInfo.multiply(a, b);
+export async function getEuiccVersion(): Promise<any> {
+  if (Platform.OS === 'android') {
+    return await EuiccInfo.getEuiccVersion();
+  }
+
+  return null;
 }
