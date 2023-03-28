@@ -2,6 +2,8 @@
 
 Simple eUICC info for Android. Contains only one function that returns the OS version of the eUICC chip. When eUICC is unavailable, the method returns null.
 
+*This pacakge is Android only and does not support iOS, web or Windows*
+
 ## Installation
 
 ```sh
@@ -15,7 +17,7 @@ import { getEuiccVersion } from 'react-native-euicc-info';
 
 // ...
 
-const result = await getEuiccVersion();
+const result = await getEuiccVersion(); // Android only
 
 if(!result) {
     // eUICC chip is not available
