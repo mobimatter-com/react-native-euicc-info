@@ -41,13 +41,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/mobimatter/react-native-euicc-info",
+  "repository": "https://github.com/mobimatter-com/react-native-euicc-info",
   "author": "Itamar Dori <itamar@mobimatter.com> (https://mobimatter.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mobimatter/react-native-euicc-info/issues"
+    "url": "https://github.com/mobimatter-com/react-native-euicc-info/issues"
   },
-  "homepage": "https://github.com/mobimatter/react-native-euicc-info#readme",
+  "homepage": "https://github.com/mobimatter-com/react-native-euicc-info#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
