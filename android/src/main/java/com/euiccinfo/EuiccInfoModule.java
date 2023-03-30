@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import android.content.Context;
 import android.telephony.euicc.EuiccManager;
+import android.telephony.euicc.EuiccInfo;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -34,6 +35,11 @@ public class EuiccInfoModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getEuiccVersion(Promise promise) {
     EuiccManager mgr = (EuiccManager) rc.getSystemService(Context.EUICC_SERVICE);
-    promise.resolve(mgr.getEuiccInfo().getOsVersion());
+    EuiccInfo info = mgr.getEuiccInfo();
+    if(info != null) {
+      promise.resolve(info.getOsVersion());
+    }
+
+    promise.resolve(null);
   }
 }
